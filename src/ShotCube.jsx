@@ -27,7 +27,7 @@ export default function ShotCube({ size, ShotCubeNb }) {
           </mesh>
         );
         setCubeMesh((prevMeshes) => [...prevMeshes, newMesh]);
-      }, 10000 + Math.random() * 10000);
+      }, 5000 + Math.random() * 10000);
     }
   }, [cubeMesh, size, cubeMeshLength, ShotCubeNb]);
 

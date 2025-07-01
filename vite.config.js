@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/Tribalism3/",
   plugins: [react()],
   server: {
     host: true, // Open to local network and display URL

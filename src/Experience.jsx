@@ -11,9 +11,9 @@ import Lights from "./Lights.jsx";
 import ShotCube from "./ShotCube.jsx";
 import { Tree } from "./Tree.jsx";
 
-const size = 50;
+const size = 30;
 const ShotCubeNb = 10;
-const voroNb = 100;
+const voroNb = 5;
 
 export default function Experience() {
   const heroURL = "Monkey06.glb";
