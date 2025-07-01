@@ -9,7 +9,7 @@ Title: Banana
 import { useGLTF } from "@react-three/drei";
 
 export function Banane(props) {
-  const { nodes, materials } = useGLTF("/banana.glb");
+  const { nodes, materials } = useGLTF("./banana.glb");
   return (
     <group {...props} dispose={null}>
       <group position={[-0.57, -7.725, -0.752]} rotation={[-Math.PI / 2, 0, Math.PI / 2]}>
@@ -28,4 +28,4 @@ export function Banane(props) {
   );
 }
 
-useGLTF.preload("/banana.glb");
+useGLTF.preload("./banana.glb");

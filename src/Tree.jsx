@@ -9,7 +9,7 @@ Title: A fantasy tree
 import { useGLTF } from "@react-three/drei";
 
 export function Tree(props) {
-  const { nodes, materials } = useGLTF("/Tree01.glb");
+  const { nodes, materials } = useGLTF("./Tree01.glb");
   return (
     <group {...props} dispose={null}>
       <mesh castShadow receiveShadow geometry={nodes.pPlane156_lambert2_0.geometry} material={materials.lambert2} />
@@ -18,4 +18,4 @@ export function Tree(props) {
   );
 }
 
-useGLTF.preload("/Tree01.glb");
+useGLTF.preload("./Tree01.glb");
