@@ -38,7 +38,7 @@ export function Mechant({ size }) {
         state.camera.position.clone().add(direction.multiplyScalar(1.5)).z - refKingKong.current.translation().z
       );
       if (vec.length() > 0.3) {
-        refKingKong.current.setLinvel(vec.normalize().multiplyScalar(0.5), false);
+        refKingKong.current.setLinvel(vec.normalize().multiplyScalar(0.9), false);
         if (vec.x > 0) {
           group2.current.rotation.y = vec.angleTo(new THREE.Vector3(0, 0, 1));
         } else {

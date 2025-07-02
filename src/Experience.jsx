@@ -109,7 +109,7 @@ export default function Experience() {
       <Lights />
       {/* <CameraShake maxYaw={0.01} maxPitch={0.01} maxRoll={0.01} yawFrequency={0.5} pitchFrequency={0.5} rollFrequency={0.4} /> */}
       <Sparkles size={6} scale={[4, 3, 4]} position-y={2.5} speed={1.2} count={30} />
-      <Physics debug={true} timeStep="vary" gravity={[0, -9.81, 0]}>
+      <Physics debug={false} timeStep="vary" gravity={[0, -9.81, 0]}>
         <KeyboardControls map={keyboardMap}>
           <Ecctrl
             animated
