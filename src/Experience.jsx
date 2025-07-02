@@ -37,7 +37,7 @@ export default function Experience() {
     walk: "Walk",
     run: "Run",
     jump: "Jump",
-    jumpIdle: "All",
+    jumpIdle: "Jump",
     jumpLand: "Jump",
     fall: "Jump1", // This is for falling from high sky
   };
