@@ -6,13 +6,14 @@ Source: https://sketchfab.com/3d-models/king-kong-animated-2b7ce05ebe4c47178b30e
 Title: King Kong animated
 */
 
-import React, { useRef } from "react";
-import { useGLTF, useAnimations } from "@react-three/drei";
+import { useAnimations, useGLTF } from "@react-three/drei";
+import { useRef } from "react";
 
 export function Mechant(props) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF("./Mechant01.glb");
   const { actions } = useAnimations(animations, group);
+  console.log(actions);
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">

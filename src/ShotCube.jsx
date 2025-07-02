@@ -37,7 +37,7 @@ export default function ShotCube({ size, ShotCubeNb }) {
         return (
           <RigidBody
             key={`ShotCube_${i}`}
-            mass={0.6}
+            mass={0.2}
             ref={cubeRef}
             name="ShotCube"
             // rotation={[Math.PI * Math.random(), Math.PI * Math.random(), Math.PI * Math.random()]}

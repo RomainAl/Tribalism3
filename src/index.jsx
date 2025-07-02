@@ -14,10 +14,11 @@ root.render(
   <>
     <EcctrlJoystick />
     <Canvas
-      dpr={1}
+      dpr={2}
+      gl={{ antialias: true }}
       shadows
       camera={{
-        fov: 100,
+        fov: 120,
         near: 0.1,
         far: 1000,
       }}

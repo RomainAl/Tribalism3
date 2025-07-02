@@ -4,8 +4,27 @@ body,
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100dvw;
+  height: 100dvh;
   overflow: hidden;
   background: #000000;
+  padding: 0;
+  margin: 0;
+}
+
+canvas {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  animation: fade-in 10s ease 0s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
