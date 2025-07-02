@@ -8,6 +8,7 @@ import { Banane } from "./Banane.jsx";
 import ExtrudedVoronoiGround from "./ExtrudedVoronoiGround.jsx";
 import { Hero } from "./Hero.jsx";
 import Lights from "./Lights.jsx";
+import { Mechant } from "./Mechant.jsx";
 import ShotCube from "./ShotCube.jsx";
 import { Tree } from "./Tree.jsx";
 
@@ -84,12 +85,12 @@ export default function Experience() {
   const collisionEnter = (e) => {
     if (e.colliderObject.name === "character-capsule-collider") {
       e.target.rigidBodyObject.visible = false;
-      console.log(e);
     }
   };
 
   return (
     <>
+      {/* <OrbitControls /> */}
       <Grid
         args={[size, size]}
         sectionColor={"lightgray"}
@@ -106,8 +107,9 @@ export default function Experience() {
         files={["./env01.png", "./env01.png", "./env01.png", "./env01.png", "./env00.png", "./env01.png"]}
       />
       <Lights />
+      {/* <CameraShake maxYaw={0.01} maxPitch={0.01} maxRoll={0.01} yawFrequency={0.5} pitchFrequency={0.5} rollFrequency={0.4} /> */}
       <Sparkles size={6} scale={[4, 3, 4]} position-y={2.5} speed={1.2} count={30} />
-      <Physics debug={false} timeStep="vary" gravity={[0, -9.81, 0]}>
+      <Physics debug={true} timeStep="vary" gravity={[0, -9.81, 0]}>
         <KeyboardControls map={keyboardMap}>
           <Ecctrl
             animated
@@ -169,6 +171,11 @@ export default function Experience() {
           <Banane />
           <CuboidCollider args={[5, 1.5, 10]} position={[0, -6, 0]} />
         </RigidBody>
+
+        <Mechant />
+
+        {/* <CuboidCollider /> */}
+
         <ExtrudedVoronoiGround
           size={size}
           numSites={voroNb} // Plus de sites = plus de cellules (attention à la performance)
