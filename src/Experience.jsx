@@ -106,7 +106,7 @@ export default function Experience() {
         files={["./env01.png", "./env01.png", "./env01.png", "./env01.png", "./env00.png", "./env01.png"]}
       />
       <Lights />
-      <Sparkles size={6} scale={[4, 2, 4]} position-y={2} speed={1.2} count={30} />
+      <Sparkles size={6} scale={[4, 3, 4]} position-y={2.5} speed={1.2} count={30} />
       <Physics debug={false} timeStep="vary" gravity={[0, -9.81, 0]}>
         <KeyboardControls map={keyboardMap}>
           <Ecctrl
