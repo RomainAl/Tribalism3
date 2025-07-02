@@ -16,14 +16,10 @@ const ShotCubeNb = 10;
 const voroNb = 5;
 
 export default function Experience() {
-  const heroURL = "Monkey06.glb";
-  const texture = useTexture("grayNoiseMedium.png");
+  const heroURL = "./Monkey06.glb";
+  const texture = useTexture("./grayNoiseMedium.png");
   texture.wrapS = texture.wrapT = "RepeatWrapping";
-  const hero = useGLTF(heroURL);
-  hero.scene.children.forEach((mesh) => {
-    mesh.castShadow = true;
-  });
-  console.log(hero);
+
   const keyboardMap = [
     { name: "forward", keys: ["ArrowUp", "KeyW"] },
     { name: "backward", keys: ["ArrowDown", "KeyS"] },
@@ -87,7 +83,7 @@ export default function Experience() {
         background
         backgroundIntensity={1}
         environmentIntensity={3}
-        files={["env01.png", "env01.png", "env01.png", "env01.png", "env00.png", "env01.png"]}
+        files={["./env01.png", "./env01.png", "./env01.png", "./env01.png", "./env00.png", "./env01.png"]}
       />
       <Lights />
 

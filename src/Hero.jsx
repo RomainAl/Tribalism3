@@ -7,7 +7,7 @@ import { useRef } from "react";
 
 export function Hero(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("/Monkey06.glb");
+  const { nodes, materials } = useGLTF("./Monkey06.glb");
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
@@ -45,4 +45,4 @@ export function Hero(props) {
   );
 }
 
-useGLTF.preload("/Monkey06.glb");
+useGLTF.preload("./Monkey06.glb");
